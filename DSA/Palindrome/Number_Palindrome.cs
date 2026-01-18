@@ -42,19 +42,18 @@ namespace DSA.Arrays
     {
         public bool IsPalindrome(int x)
         {
-            if (x < 0)
+            if (x < 0 || (x % 10 == 0 && x!=0))
             {
                 return false;
             }
-            int x_copy = x;
             int result = 0;
-            while (x_copy > 0)
+            while (result < x)
             {
                 result *= 10;
-                result += (x_copy % 10);
-                x_copy = x_copy / 10;
+                result += (x % 10);
+                x = x / 10;
             }
-            return x == result;
+            return (x == result || x == result/10);
         }
     }
 }
