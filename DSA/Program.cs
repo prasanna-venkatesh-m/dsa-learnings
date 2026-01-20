@@ -17,8 +17,8 @@ namespace DSA
             //DuplicateCheck dup = new DuplicateCheck();
             //Console.WriteLine(dup.ContainsDuplicate([1, 2, 3, 4]));
 
-            Third_Maximum_Number tmn = new Third_Maximum_Number();
-            Console.WriteLine(tmn.ThirdMax([3,2,1]).ToString());
+            //Third_Maximum_Number tmn = new Third_Maximum_Number();
+            //Console.WriteLine(tmn.ThirdMax([3,2,1]).ToString());
         }
     }
 }
