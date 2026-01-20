@@ -36,7 +36,7 @@ Follow-up:
 Can you solve this problem without converting the integer to a string?
 */
 
-namespace DSA.Arrays
+namespace DSA
 {
     public class Solution
     {
