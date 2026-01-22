@@ -21,6 +21,13 @@ namespace DSA
 
             // Reverse_Integer rev = new Reverse_Integer();
             // Console.WriteLine(rev.Reverse(-123).ToString());
+
+            Plus_One po = new Plus_One();
+            var res = po.PlusOne([4,3,2,1]);
+            foreach(var item in res)
+            {
+                Console.WriteLine(item);
+            }
         }
     }
 }
