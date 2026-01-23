@@ -8,36 +8,20 @@ namespace DSA
     {
         public int[] PlusOne(int[] digits)
         {
-            Stack<int> result = new Stack<int>();
-            int remainder = 0;
-            int val = digits[digits.Length - 1]+1;
-            if (val > 9)
+            for(int i=digits.Length-1;i>=0;i--)
             {
-                remainder = val / 10;
-                val = val % 10;
-            }
-            result.Push(val);
+                if (digits[i] < 9)
+                {
+                    digits[i]++;
+                    return digits;
+                }
 
-            for (int i = digits.Length-2; i >= 0; i--)
-            {
-                int others = digits[i]+ remainder;
-                if (others > 9)
-                {
-                    remainder = others / 10;
-                    others = others % 10;
-                }
-                else
-                {
-                    remainder = 0;
-                }
-                result.Push(others);
-            }
-            if(remainder > 0)
-            {
-                result.Push(remainder);
+                digits[i] = 0;
             }
 
-            return result.ToArray();
+            int[] result = new int[digits.Length + 1];
+            result[0] = 1;
+            return result;
         }
     }
 }
