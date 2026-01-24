@@ -29,8 +29,11 @@ namespace DSA
             //    Console.WriteLine(item);
             //}
 
-            Lastword_Length leng = new Lastword_Length();
-            Console.WriteLine(leng.LengthOfLastWord("   fly me   to   the moon  "));
+            //Lastword_Length leng = new Lastword_Length();
+            //Console.WriteLine(leng.LengthOfLastWord("   fly me   to   the moon  "));
+
+            Single_Number sn = new Single_Number();
+            Console.WriteLine(sn.SingleNumber([4, 1, 2, 1, 2]).ToString());
         }
     }
 }
