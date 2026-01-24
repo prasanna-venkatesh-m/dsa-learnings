@@ -9,11 +9,34 @@ namespace DSA
     {
         public int SingleNumber(int[] nums)
         {
-            return nums.GroupBy(x => x).Select(x => new
+            int result = 0;
+            foreach (int num in nums)
             {
-                val = x.Key,
-                counts = x.Count()
-            }).Where(x => x.counts == 1).Select(x => x.val).FirstOrDefault();
+                result ^= num; // XOR accumulates
+            }
+            return result;
+
+            //Solution 2
+            //HashSet<int> result = new HashSet<int>();
+            //foreach(int i in nums)
+            //{
+            //    if (result.Contains(i))
+            //    {
+            //        result.Remove(i);
+            //    }
+            //    else
+            //    {
+            //        result.Add(i);
+            //    }
+            //}
+            //return result.FirstOrDefault();
+
+            //Solution 1
+            //return nums.GroupBy(x => x).Select(x => new
+            //{
+            //    val = x.Key,
+            //    counts = x.Count()
+            //}).Where(x => x.counts == 1).Select(x => x.val).FirstOrDefault();
         }
     }
 }
