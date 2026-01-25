@@ -8,29 +8,20 @@ namespace DSA
     {
         public int MajorityElement(int[] nums)
         {
-            Dictionary<int, int> counts = new Dictionary<int, int>();
-            foreach(int i in nums)
+            int count = 0;
+            int candidate = 0;
+
+            foreach (int num in nums)
             {
-                if (counts.ContainsKey(i))
+                if (count == 0)
                 {
-                    counts[i]++;
+                    candidate = num;
                 }
-                else
-                {
-                    counts.Add(i, 1);
-                }
+
+                count += (num == candidate) ? 1 : -1;
             }
-            int max_count = 0;
-            int key = 0;
-            foreach (var item in counts)
-            {
-                if(item.Value > max_count)
-                {
-                    max_count = item.Value;
-                    key = item.Key;
-                }
-            }
-            return key;
+
+            return candidate;
         }
     }
 }
