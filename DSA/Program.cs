@@ -37,6 +37,9 @@ namespace DSA
 
             // Majority_Element me = new Majority_Element();
             // Console.WriteLine(me.MajorityElement([2, 2, 1, 1, 1, 2, 2]).ToString());
+
+            MergeSortedArray ms = new MergeSortedArray();
+            ms.Merge([1, 2, 3, 0, 0, 0], 3, [2, 5, 6], 3);
         }
     }
 }
