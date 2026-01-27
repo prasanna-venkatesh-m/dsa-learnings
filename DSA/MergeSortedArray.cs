@@ -12,54 +12,56 @@ namespace DSA
             {
                 nums1[m+ i] = nums2[i];
             }
-            Array.Copy(Sort(nums1), nums1, nums1.Length);
+            Sort(nums1, 0, nums1.Length);
+            foreach(int i in nums1)
+            {
+                Console.WriteLine(i);
+            }
         }
 
-        public int[] Sort(int[] nums)
+        public void Sort(int[] nums, int start, int end)
         {
-            if (nums.Length == 1)
+            if (end-start == 1)
             {
-                return nums;
+                return;
             }
 
-            int mid = nums.Length / 2;
+            int mid = (start + end) / 2;
 
-            int[] left = nums.Skip(0).Take(mid).ToArray();
-            int[] right = nums.Skip(mid).Take(nums.Length - mid).ToArray();
-
-            left = Sort(left);
-            right = Sort(right);
-            int[] joinedArray = Merge(left, right);
-
-            return joinedArray;
+            Sort(nums, start, mid);
+            Sort(nums, mid, end);
+            Merge(nums, start, mid, end);
         }
 
-        public int[] Merge(int[] first, int[] second)
+        public void Merge(int[] nums, int start, int mid, int end)
         {
-            int[] joined = new int[first.Length + second.Length];
+            int[] joined = new int[end - start];
 
-            int i = 0;
-            int j = 0;
+            int i = start;
+            int j = mid;
             int k = 0;
 
-            while(i<first.Length && j < second.Length)
+            while(i < mid && j < end)
             {
-                if (first[i] <= second[j])
-                    joined[k++] = first[i++];
+                if (nums[i] <= nums[j])
+                    joined[k++] = nums[i++];
                 else
-                    joined[k++] = second[j++];
+                    joined[k++] = nums[j++];
             }
 
-            while (i < first.Length)
+            while (i < mid)
             {
-                joined[k++] = first[i++];
+                joined[k++] = nums[i++];
             }
-            while(j < second.Length)
+            while (j < end)
             {
-                joined[k++] = second[j++];
+                joined[k++] = nums[j++];
             }
 
-            return joined;
+            for(int z=0; z < joined.Length; z++)
+            {
+                nums[start + z] = joined[z];
+            }
         }
     }
 }
