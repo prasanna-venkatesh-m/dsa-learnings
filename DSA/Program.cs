@@ -38,8 +38,11 @@ namespace DSA
             // Majority_Element me = new Majority_Element();
             // Console.WriteLine(me.MajorityElement([2, 2, 1, 1, 1, 2, 2]).ToString());
 
-            MergeSortedArray ms = new MergeSortedArray();
-            ms.Merge([4, 0, 0, 0, 0, 0], 1, [1, 2, 3, 5, 6], 5);
+            //MergeSortedArray ms = new MergeSortedArray();
+            //ms.Merge([4, 0, 0, 0, 0, 0], 1, [1, 2, 3, 5, 6], 5);
+
+            MoveZeros mz = new MoveZeros();
+            mz.MoveZeroes([1, 0, 1]);
         }
     }
 }
