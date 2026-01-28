@@ -42,7 +42,7 @@ namespace DSA
             //ms.Merge([4, 0, 0, 0, 0, 0], 1, [1, 2, 3, 5, 6], 5);
 
             MoveZeros mz = new MoveZeros();
-            mz.MoveZeroes([1, 0, 1]);
+            mz.MoveZeroes([4, 2, 4, 0, 0, 3, 0, 5, 1, 0]);
         }
     }
 }
