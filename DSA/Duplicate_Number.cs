@@ -8,14 +8,17 @@ namespace DSA
     {
         public int FindDuplicate(int[] nums)
         {
-            HashSet<int> result = new HashSet<int>();
+            int[] res = new int[nums.Length+1];
             foreach(int i in nums)
             {
-                if (result.Contains(i))
+                if (res[i] == 0)
+                {
+                    res[i] = 1;
+                }
+                else
                 {
                     return i;
                 }
-                result.Add(i);
             }
             return -1;
         }
