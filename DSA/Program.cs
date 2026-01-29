@@ -44,8 +44,11 @@ namespace DSA
             //MoveZeros mz = new MoveZeros();
             //mz.MoveZeroes([4, 2, 4, 0, 0, 3, 0, 5, 1, 0]);
 
-            Missing_Number mn = new Missing_Number();
-            Console.Write(mn.MissingNumber([9, 6, 4, 2, 3, 5, 7, 0, 1]).ToString());
+            //Missing_Number mn = new Missing_Number();
+            //Console.Write(mn.MissingNumber([3, 3, 3, 3, 3]).ToString());
+
+            Duplicate_Number mn = new Duplicate_Number();
+            Console.Write(mn.FindDuplicate([3, 3, 3, 3, 3]).ToString());
         }
     }
 }
