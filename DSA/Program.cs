@@ -41,8 +41,11 @@ namespace DSA
             //MergeSortedArray ms = new MergeSortedArray();
             //ms.Merge([4, 0, 0, 0, 0, 0], 1, [1, 2, 3, 5, 6], 5);
 
-            MoveZeros mz = new MoveZeros();
-            mz.MoveZeroes([4, 2, 4, 0, 0, 3, 0, 5, 1, 0]);
+            //MoveZeros mz = new MoveZeros();
+            //mz.MoveZeroes([4, 2, 4, 0, 0, 3, 0, 5, 1, 0]);
+
+            Missing_Number mn = new Missing_Number();
+            Console.Write(mn.MissingNumber([9, 6, 4, 2, 3, 5, 7, 0, 1]).ToString());
         }
     }
 }
