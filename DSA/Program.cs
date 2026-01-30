@@ -47,8 +47,11 @@ namespace DSA
             //Missing_Number mn = new Missing_Number();
             //Console.Write(mn.MissingNumber([3, 3, 3, 3, 3]).ToString());
 
-            Duplicate_Number mn = new Duplicate_Number();
-            Console.Write(mn.FindDuplicate([3, 3, 3, 3, 3]).ToString());
+            //Duplicate_Number mn = new Duplicate_Number();
+            //Console.Write(mn.FindDuplicate([3, 3, 3, 3, 3]).ToString());
+
+            Binary_search bs = new Binary_search();
+            Console.WriteLine(bs.Search([-1, 0, 3, 5, 9, 12], 2).ToString());
         }
     }
 }
