@@ -54,7 +54,7 @@ namespace DSA
             //Console.WriteLine(bs.Search([-1, 0, 3, 5, 9, 12], 2).ToString());
 
             SortArray_ByParity sr = new SortArray_ByParity();
-            var res = sr.SortArrayByParity([3, 1, 2, 4]);
+            var res = sr.SortArrayByParity([0,1]);
             foreach (int i in res) Console.WriteLine(i);
         }
     }
