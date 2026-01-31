@@ -50,8 +50,12 @@ namespace DSA
             //Duplicate_Number mn = new Duplicate_Number();
             //Console.Write(mn.FindDuplicate([3, 3, 3, 3, 3]).ToString());
 
-            Binary_search bs = new Binary_search();
-            Console.WriteLine(bs.Search([-1, 0, 3, 5, 9, 12], 2).ToString());
+            //Binary_search bs = new Binary_search();
+            //Console.WriteLine(bs.Search([-1, 0, 3, 5, 9, 12], 2).ToString());
+
+            SortArray_ByParity sr = new SortArray_ByParity();
+            var res = sr.SortArrayByParity([3, 1, 2, 4]);
+            foreach (int i in res) Console.WriteLine(i);
         }
     }
 }
