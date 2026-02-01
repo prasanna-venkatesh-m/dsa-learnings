@@ -8,39 +8,28 @@ namespace DSA
     {
         public int[] SortEvenOdd(int[] nums)
         {
-            List<int> odds = new List<int>();
-            List<int> evens = new List<int>();
+            bool isOddArray = nums.Length % 2 == 0;
+            int[] evens = new int[isOddArray ? (nums.Length / 2) : (nums.Length + 1) / 2];
+            int[] odds = new int[nums.Length / 2];
+            int eIndex = 0;
+            int oIndex = 0;
 
-            for(int i=0;i< nums.Length; i++)
+            for(int i = 0; i< nums.Length; i++)
             {
-                if (i % 2 == 0) evens.Add(nums[i]);
-                else odds.Add(nums[i]);
+                if (i % 2 == 0) evens[eIndex++] = nums[i];
+                else odds[oIndex++] = nums[i];
             }
 
-            odds = odds.OrderByDescending(x=>x).ToList();
-            evens = evens.OrderBy(x => x).ToList();
+            evens = evens.OrderBy(x => x).ToArray();
+            odds = odds.OrderByDescending(x => x).ToArray();
 
-            int k = 0;
-
-            foreach(int val in evens)
+            int numsIndex = 0;
+            for(int i=0;i<nums.Length/2; i++)
             {
-                if (k < nums.Length)
-                {
-                    nums[k] = val;
-                    k += 2;
-                }
+                nums[numsIndex++] = evens[i];
+                nums[numsIndex++] = odds[i];
             }
-
-            int j = 1;
-
-            foreach (int val in odds)
-            {
-                if (j < nums.Length)
-                {
-                    nums[j] = val;
-                    j += 2;
-                }
-            }
+            if (!isOddArray) nums[numsIndex] = evens[evens.Length - 1];
             return nums;
         }
     }
