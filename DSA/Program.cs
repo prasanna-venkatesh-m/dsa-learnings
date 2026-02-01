@@ -53,8 +53,12 @@ namespace DSA
             //Binary_search bs = new Binary_search();
             //Console.WriteLine(bs.Search([-1, 0, 3, 5, 9, 12], 2).ToString());
 
-            SortArray_ByParity sr = new SortArray_ByParity();
-            var res = sr.SortArrayByParity([0,1]);
+            //SortArray_ByParity sr = new SortArray_ByParity();
+            //var res = sr.SortArrayByParity([0,1]);
+            //foreach (int i in res) Console.WriteLine(i);
+
+            Sort_EvenOdd sr = new Sort_EvenOdd();
+            var res = sr.SortEvenOdd([36, 45, 32, 31, 15, 41, 9, 46, 36, 6, 15, 16, 33, 26, 27, 31, 44, 34]);
             foreach (int i in res) Console.WriteLine(i);
         }
     }
