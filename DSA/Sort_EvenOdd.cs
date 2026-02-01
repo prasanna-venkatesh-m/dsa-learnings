@@ -20,31 +20,8 @@ namespace DSA
                 else odds[oIndex++] = nums[i];
             }
 
-            for(int i = 0; i < evens.Length-1; i++)
-            {
-                for(int j=i+1; j<evens.Length; j++)
-                {
-                    if (evens[i] > evens[j])
-                    {
-                        int temp = evens[i];
-                        evens[i] = evens[j];
-                        evens[j] = temp;
-                    }
-                }
-            }
-
-            for (int i = 0; i < odds.Length - 1; i++)
-            {
-                for (int j = i + 1; j < odds.Length; j++)
-                {
-                    if (odds[i] < odds[j])
-                    {
-                        int temp = odds[i];
-                        odds[i] = odds[j];
-                        odds[j] = temp;
-                    }
-                }
-            }
+            Array.Sort(evens);
+            Array.Sort(odds, (a, b) => b.CompareTo(a));
 
             int numsIndex = 0;
             for(int i=0;i<nums.Length/2; i++)
