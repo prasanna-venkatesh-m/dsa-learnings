@@ -57,9 +57,14 @@ namespace DSA
             //var res = sr.SortArrayByParity([0,1]);
             //foreach (int i in res) Console.WriteLine(i);
 
-            Sort_EvenOdd sr = new Sort_EvenOdd();
-            var res = sr.SortEvenOdd([5, 39, 33, 5, 12, 27, 20, 45, 14, 25, 32, 33, 30, 30, 9, 14, 44, 15, 21]);
-            foreach (int i in res) Console.WriteLine(i);
+            //Sort_EvenOdd sr = new Sort_EvenOdd();
+            //var res = sr.SortEvenOdd([5, 39, 33, 5, 12, 27, 20, 45, 14, 25, 32, 33, 30, 30, 9, 14, 44, 15, 21]);
+            //foreach (int i in res) Console.WriteLine(i);
+
+            Range_Sum_Query rs = new Range_Sum_Query([-2, 0, 3, -5, 2, -1]);
+            Console.WriteLine(rs.SumRange(0, 2));
+            Console.WriteLine(rs.SumRange(2, 5));
+            Console.WriteLine(rs.SumRange(0, 5));
         }
     }
 }
