@@ -61,10 +61,13 @@ namespace DSA
             //var res = sr.SortEvenOdd([5, 39, 33, 5, 12, 27, 20, 45, 14, 25, 32, 33, 30, 30, 9, 14, 44, 15, 21]);
             //foreach (int i in res) Console.WriteLine(i);
 
-            Range_Sum_Query rs = new Range_Sum_Query([-2, 0, 3, -5, 2, -1]);
-            Console.WriteLine(rs.SumRange(0, 2));
-            Console.WriteLine(rs.SumRange(2, 5));
-            Console.WriteLine(rs.SumRange(0, 5));
+            //Range_Sum_Query rs = new Range_Sum_Query([-2, 0, 3, -5, 2, -1]);
+            //Console.WriteLine(rs.SumRange(0, 2));
+            //Console.WriteLine(rs.SumRange(2, 5));
+            //Console.WriteLine(rs.SumRange(0, 5));
+
+            Valid_Palindrome vp = new Valid_Palindrome();
+            Console.WriteLine(vp.IsPalindrome("0P"));
         }
     }
 }
