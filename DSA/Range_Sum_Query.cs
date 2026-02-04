@@ -10,6 +10,12 @@ namespace DSA
         public Range_Sum_Query(int[] nums)
         {
             this.nums = nums;
+            int sum = 0;
+            for(int i=0; i < nums.Length; i++)
+            {
+                sum += nums[i];
+                this.nums[i] = sum;
+            }
         }
 
         public int SumRange(int left, int right)
