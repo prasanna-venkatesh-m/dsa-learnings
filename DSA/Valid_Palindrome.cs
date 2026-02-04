@@ -9,15 +9,14 @@ namespace DSA
     {
         public bool IsPalindrome(string s)
         {
-            string filteredText = Regex.Replace(s, @"[^a-zA-Z0-9]", "");
-            char[] chars = filteredText.ToLower().ToCharArray();
+            string filteredText = Regex.Replace(s, @"[^a-zA-Z0-9]", "").ToLower();
 
             int start = 0;
-            int end = chars.Length - 1;
+            int end = filteredText.Length - 1;
 
             while( start != end && start <= end)
             {
-                if (chars[start] == chars[end])
+                if (filteredText[start] == filteredText[end])
                 {
                     start++;
                     end--;
