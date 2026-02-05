@@ -67,7 +67,7 @@ namespace DSA
             //Console.WriteLine(rs.SumRange(0, 5));
 
             Valid_Palindrome vp = new Valid_Palindrome();
-            Console.WriteLine(vp.IsPalindrome("A man, a plan, a canal: Panama"));
+            Console.WriteLine(vp.IsPalindrome(" "));
         }
     }
 }

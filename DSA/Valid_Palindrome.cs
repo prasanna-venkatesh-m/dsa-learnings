@@ -9,9 +9,40 @@ namespace DSA
     {
         public bool IsPalindrome(string s)
         {
-            char[] filteredText = Regex.Replace(s, @"[^a-zA-Z0-9]", "").ToLower().ToCharArray();
-            char[] reversed = filteredText.Reverse().ToArray();
-            return filteredText.SequenceEqual(reversed);
+            s = s.ToLower();
+            int start = 0;
+            int end = s.Length - 1;
+
+            while( start != end && start <= end)
+            {
+                if (checkIsSpecial(s[start]))
+                {
+                    start++;
+                }
+                else if (checkIsSpecial(s[end]))
+                {
+                    end--;
+                }
+                else if (s[start] == s[end])
+                {
+                    start++;
+                    end--;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        public bool checkIsSpecial(char c)
+        {
+            if ((c >= 97 && c <= 122) || (c >= 65 && c <= 90) || (c >= 48 && c <= 57))
+                return false;
+
+            return true;
         }
     }
 }
