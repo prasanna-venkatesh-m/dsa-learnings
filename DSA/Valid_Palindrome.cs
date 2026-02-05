@@ -9,7 +9,6 @@ namespace DSA
     {
         public bool IsPalindrome(string s)
         {
-            s = s.ToLower();
             int start = 0;
             int end = s.Length - 1;
 
@@ -23,7 +22,7 @@ namespace DSA
                 {
                     end--;
                 }
-                else if (s[start] == s[end])
+                else if (char.ToLowerInvariant(s[start]) == char.ToLowerInvariant(s[end]))
                 {
                     start++;
                     end--;
