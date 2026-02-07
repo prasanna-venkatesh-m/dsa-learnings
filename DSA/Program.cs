@@ -66,8 +66,11 @@ namespace DSA
             //Console.WriteLine(rs.SumRange(2, 5));
             //Console.WriteLine(rs.SumRange(0, 5));
 
-            Valid_Palindrome vp = new Valid_Palindrome();
-            Console.WriteLine(vp.IsPalindrome(" "));
+            //Valid_Palindrome vp = new Valid_Palindrome();
+            //Console.WriteLine(vp.IsPalindrome(" "));
+
+            Reverse_String_2 rs = new Reverse_String_2();
+            Console.WriteLine(rs.ReverseStr("hyzqyljrnigxvdtneasepfahmtyhlohwxmkqcdfehybknvdmfrfvtbsovjbdhevlfxpdaovjgunjqlimjkfnqcqnajmebeddqsgl", 39));
         }
     }
 }
