@@ -11,7 +11,7 @@ namespace DSA
         {
             BigInteger a = BigInteger.Parse(num1);
             BigInteger b = BigInteger.Parse(num2);
-            return a + b + "";
+            return (a + b).ToString();
         }
     }
 }
