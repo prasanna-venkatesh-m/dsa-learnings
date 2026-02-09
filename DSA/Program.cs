@@ -69,8 +69,11 @@ namespace DSA
             //Valid_Palindrome vp = new Valid_Palindrome();
             //Console.WriteLine(vp.IsPalindrome(" "));
 
-            Reverse_String_2 rs = new Reverse_String_2();
-            Console.WriteLine(rs.ReverseStr("hyzqyljrnigxvdtneasepfahmtyhlohwxmkqcdfehybknvdmfrfvtbsovjbdhevlfxpdaovjgunjqlimjkfnqcqnajmebeddqsgl", 39));
+            //Reverse_String_2 rs = new Reverse_String_2();
+            //Console.WriteLine(rs.ReverseStr("hyzqyljrnigxvdtneasepfahmtyhlohwxmkqcdfehybknvdmfrfvtbsovjbdhevlfxpdaovjgunjqlimjkfnqcqnajmebeddqsgl", 39));
+
+            Add_Strings ad = new Add_Strings();
+            Console.WriteLine(ad.AddStrings("456", "77"));
         }
     }
 }
