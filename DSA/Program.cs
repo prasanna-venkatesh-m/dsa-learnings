@@ -73,7 +73,7 @@ namespace DSA
             //Console.WriteLine(rs.ReverseStr("hyzqyljrnigxvdtneasepfahmtyhlohwxmkqcdfehybknvdmfrfvtbsovjbdhevlfxpdaovjgunjqlimjkfnqcqnajmebeddqsgl", 39));
 
             Add_Strings ad = new Add_Strings();
-            Console.WriteLine(ad.AddStrings("456", "77"));
+            Console.WriteLine(ad.AddStrings("401716832807512840963", "167141802233061013023557397451289113296441069"));
         }
     }
 }
