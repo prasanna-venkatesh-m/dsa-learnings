@@ -13,21 +13,28 @@ namespace DSA
             num1 = num1.PadLeft(maxLen, '0');
             num2 = num2.PadLeft(maxLen, '0');
 
-            int i = 0;
-            BigInteger sum = 0;
+            List<int> result = new List<int>(maxLen);
+            int carry = 0;
 
-            while (i < maxLen)
+            for (int i = 0; i < maxLen; i++)
             {
-                BigInteger power = (BigInteger)Math.Pow(10.00, (maxLen - i - 1));
-                BigInteger first = num1[i] - '0';
-                BigInteger second = num2[i] - '0';
-                first = first * power;
-                second = second * power;
-                sum = sum + first + second;
-                i++;
+                int sum = (num1[i] - '0') + (num2[i] - '0');
+                result.Add(sum);
             }
 
-            return sum.ToString();
+            // resolve carries RIGHT → LEFT
+            for (int i = maxLen - 1; i >= 0; i--)
+            {
+                result[i] += carry;
+                carry = result[i] / 10;
+                result[i] %= 10;
+            }
+
+            if (carry > 0)
+                result.Insert(0, carry);
+
+            return string.Concat(result);
         }
+
     }
 }
