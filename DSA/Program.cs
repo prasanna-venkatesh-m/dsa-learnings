@@ -72,8 +72,11 @@ namespace DSA
             //Reverse_String_2 rs = new Reverse_String_2();
             //Console.WriteLine(rs.ReverseStr("hyzqyljrnigxvdtneasepfahmtyhlohwxmkqcdfehybknvdmfrfvtbsovjbdhevlfxpdaovjgunjqlimjkfnqcqnajmebeddqsgl", 39));
 
-            Add_Strings ad = new Add_Strings();
-            Console.WriteLine(ad.AddStrings("401716832807512840963", "167141802233061013023557397451289113296441069"));
+            //Add_Strings ad = new Add_Strings();
+            //Console.WriteLine(ad.AddStrings("401716832807512840963", "167141802233061013023557397451289113296441069"));
+
+            Second_Highest_Digit sh = new Second_Highest_Digit();
+            Console.WriteLine(sh.SecondHighest("abc1111"));
         }
     }
 }
