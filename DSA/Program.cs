@@ -78,8 +78,11 @@ namespace DSA
             //Second_Highest_Digit sh = new Second_Highest_Digit();
             //Console.WriteLine(sh.SecondHighest("abc1111"));
 
-            Unique_Morse_Code um = new Unique_Morse_Code();
-            Console.WriteLine(um.UniqueMorseRepresentations(["gin", "zen", "gig", "msg"]).ToString());
+            //Unique_Morse_Code um = new Unique_Morse_Code();
+            //Console.WriteLine(um.UniqueMorseRepresentations(["gin", "zen", "gig", "msg"]).ToString());
+
+            Reverse_Only_Letters rs = new Reverse_Only_Letters();
+            Console.WriteLine(rs.ReverseOnlyLetters("a-bC-dEf-ghIj"));
         }
     }
 }
