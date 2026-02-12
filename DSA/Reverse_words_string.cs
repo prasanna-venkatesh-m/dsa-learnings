@@ -10,18 +10,31 @@ namespace DSA
         {
             StringBuilder sb = new StringBuilder();
             string[] words = s.Split(" ");
-            for(int j=0;j<words.Length;j++)
+            int nospaces = words.Length - 1;
+            foreach(string word in words)
             {
-                for(int i = words[j].Length-1; i>=0; i--)
-                {
-                    sb.Append(words[j][i]);
-                }
-                if(j != words.Length - 1)
+                sb.Append(reverse(word));
+                if(nospaces > 0)
                 {
                     sb.Append(" ");
+                    nospaces--;
                 }
             }
             return sb.ToString();
+        }
+
+        public StringBuilder reverse(string s)
+        {
+            StringBuilder sb = new StringBuilder(s);
+            int start = 0;
+            int end = sb.Length - 1;
+            while (start < end)
+            {
+                char c = sb[start];
+                sb[start++] = sb[end];
+                sb[end--] = c;
+            }
+            return sb;
         }
     }
 }
