@@ -81,8 +81,14 @@ namespace DSA
             //Unique_Morse_Code um = new Unique_Morse_Code();
             //Console.WriteLine(um.UniqueMorseRepresentations(["gin", "zen", "gig", "msg"]).ToString());
 
-            Reverse_Only_Letters rs = new Reverse_Only_Letters();
-            Console.WriteLine(rs.ReverseOnlyLetters("a-bC-dEf-ghIj"));
+            //Reverse_Only_Letters rs = new Reverse_Only_Letters();
+            //Console.WriteLine(rs.ReverseOnlyLetters("a-bC-dEf-ghIj"));
+
+            //Fault_keyboard fk = new Fault_keyboard();
+            //Console.WriteLine(fk.FinalString("poiinter"));
+
+            To_Lowercase tl = new To_Lowercase();
+            Console.Write(tl.ToLowerCase("LOVELY"));
         }
     }
 }
