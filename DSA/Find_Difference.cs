@@ -9,31 +9,15 @@ namespace DSA
     {
         public char FindTheDifference(string s, string t)
         {
-            Hashtable ht = new Hashtable();
-            for (int i = 0; i< t.Length; i++)
+            long s1 = 0;
+            long s2 = 0;
+            for(int i=0;i<s.Length; i++)
             {
-                if (ht.ContainsKey(t[i]))
-                {
-                    ht[t[i]] = (int)ht[t[i]] + 1; 
-                }
-                else
-                {
-                    ht.Add(t[i], 1);
-                }
+                s1 = s1 + s[i];
+                s2 = s2 + t[i];
             }
-
-            for (int i = 0; i < s.Length; i++)
-            {
-                ht[s[i]] = (int)ht[s[i]] - 1;
-            }
-
-            // Find the character with count 1
-            foreach (DictionaryEntry entry in ht)
-            {
-                if ((int)entry.Value == 1)
-                    return (char)entry.Key;
-            }
-            return '0';
+            s2 = s2 + t[t.Length - 1];
+            return Convert.ToChar(s2-s1);
         }
     }
 }
