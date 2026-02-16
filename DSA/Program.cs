@@ -93,8 +93,11 @@ namespace DSA
             //Reverse_words_string rv = new Reverse_words_string();
             //Console.WriteLine(rv.ReverseWords("Let's take LeetCode contest"));
 
-            Find_Difference fd = new Find_Difference();
-            Console.WriteLine(fd.FindTheDifference("abcd", "abcde"));
+            //Find_Difference fd = new Find_Difference();
+            //Console.WriteLine(fd.FindTheDifference("abcd", "abcde"));
+
+            Rotate_String rs = new Rotate_String();
+            Console.WriteLine(rs.RotateString("abcde", "abced"));
         }
     }
 }

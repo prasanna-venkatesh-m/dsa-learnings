@@ -11,7 +11,7 @@ namespace DSA
         {
             long s1 = 0;
             long s2 = 0;
-            for(int i=0;i<s.Length; i++)
+            for(int i=0;i<s.Length; i++ )
             {
                 s1 = s1 + s[i];
                 s2 = s2 + t[i];
