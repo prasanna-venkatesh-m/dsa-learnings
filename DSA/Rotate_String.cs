@@ -8,7 +8,11 @@ namespace DSA
     {
         public bool RotateString(string s, string goal)
         {
-            if(s == goal)
+            if (s.Length != goal.Length)
+            {
+                return false;
+            }
+            if (s == goal)
             {
                 return true;
             }
