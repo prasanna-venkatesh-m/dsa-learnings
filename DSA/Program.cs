@@ -99,8 +99,12 @@ namespace DSA
             //Rotate_String rs = new Rotate_String();
             //Console.WriteLine(rs.RotateString("defdefdefabcabc", "defdefabcabcdef"));
 
-            Detect_Capital dc = new Detect_Capital();
-            Console.WriteLine(dc.DetectCapitalUse("Leetcode"));
+            //Detect_Capital dc = new Detect_Capital();
+            //Console.WriteLine(dc.DetectCapitalUse("Leetcode"));
+
+            Keyboard_row kr = new Keyboard_row();
+            var res = kr.FindWords(["Hello", "Alaska", "Dad", "Peace"]);
+            foreach (string i in res) Console.WriteLine(i);
         }
     }
 }
