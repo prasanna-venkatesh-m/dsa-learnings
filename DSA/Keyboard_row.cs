@@ -13,17 +13,15 @@ namespace DSA
             foreach(string normalWord in words)
             {
                 string word = normalWord.ToLower();
-                bool isSameRow = true;
-                int row_num = rows[0].Contains(word[0]) ? 0 : rows[1].Contains(word[0]) ? 1 : 2;
-                for(int i=1; i< word.Length; i++)
+                if(word.All(c => "qwertyuiop".Contains(c)))
                 {
-                    if (!rows[row_num].Contains(word[i]))
-                    {
-                        isSameRow = false;
-                        break;
-                    }
+                    res.Add(normalWord);
                 }
-                if (isSameRow)
+                if (word.All(c => "asdfghjkl".Contains(c)))
+                {
+                    res.Add(normalWord);
+                }
+                if (word.All(c => "zxcvbnm".Contains(c)))
                 {
                     res.Add(normalWord);
                 }
