@@ -97,7 +97,7 @@ namespace DSA
             //Console.WriteLine(fd.FindTheDifference("abcd", "abcde"));
 
             Rotate_String rs = new Rotate_String();
-            Console.WriteLine(rs.RotateString("abcde", "abced"));
+            Console.WriteLine(rs.RotateString("defdefdefabcabc", "defdefabcabcdef"));
         }
     }
 }

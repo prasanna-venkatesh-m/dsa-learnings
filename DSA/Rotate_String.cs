@@ -12,27 +12,7 @@ namespace DSA
             {
                 return true;
             }
-
-            for(int i=1; i< s.Length; i++)
-            {
-                StringBuilder sb = new StringBuilder();
-                int j = i;
-                while (j < s.Length)
-                {
-                    sb.Append(s[j]);
-                    j++;
-                }
-                for(int k = 0; k < i; k++)
-                {
-                    sb.Append(s[k]);
-                }
-
-                if(goal == sb.ToString())
-                {
-                    return true;
-                }
-            }
-            return false;
+            return (s + s).Contains(goal);
         }
     }
 }
