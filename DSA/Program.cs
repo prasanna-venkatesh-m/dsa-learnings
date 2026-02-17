@@ -96,8 +96,11 @@ namespace DSA
             //Find_Difference fd = new Find_Difference();
             //Console.WriteLine(fd.FindTheDifference("abcd", "abcde"));
 
-            Rotate_String rs = new Rotate_String();
-            Console.WriteLine(rs.RotateString("defdefdefabcabc", "defdefabcabcdef"));
+            //Rotate_String rs = new Rotate_String();
+            //Console.WriteLine(rs.RotateString("defdefdefabcabc", "defdefabcabcdef"));
+
+            Detect_Capital dc = new Detect_Capital();
+            Console.WriteLine(dc.DetectCapitalUse("Leetcode"));
         }
     }
 }
