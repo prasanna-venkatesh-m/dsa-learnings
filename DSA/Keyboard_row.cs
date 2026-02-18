@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace DSA
@@ -8,20 +10,30 @@ namespace DSA
     {
         public string[] FindWords(string[] words)
         {
+            HashSet<char> row1 = new HashSet<char>() { 'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p' };
+            HashSet<char> row2 = new HashSet<char>() { 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l' };
+            HashSet<char> row3 = new HashSet<char>() { 'z', 'x', 'c', 'v', 'b', 'n', 'm' };
+
             List<string> res = new List<string>();
-            string[] rows = { "qwertyuiop", "asdfghjkl", "zxcvbnm" };
             foreach(string normalWord in words)
             {
                 string word = normalWord.ToLower();
-                if(word.All(c => "qwertyuiop".Contains(c)))
+                HashSet<char> targetRow = null;
+                bool isSameRow = true;
+
+                if (row1.Contains(word[0])) targetRow = row1;
+                else if(row2.Contains(word[0])) targetRow = row2;
+                else if (row3.Contains(word[0])) targetRow = row3;
+
+                foreach(char c in word)
                 {
-                    res.Add(normalWord);
+                    if (!targetRow.Contains(c))
+                    {
+                        isSameRow = false;
+                        break;
+                    }
                 }
-                if (word.All(c => "asdfghjkl".Contains(c)))
-                {
-                    res.Add(normalWord);
-                }
-                if (word.All(c => "zxcvbnm".Contains(c)))
+                if (isSameRow)
                 {
                     res.Add(normalWord);
                 }
