@@ -8,26 +8,31 @@ namespace DSA
 {
     public class Keyboard_row
     {
-        private static readonly int[] map = new int[26]
+        private static readonly byte[] map = new byte[128];
+
+        static Keyboard_row()
         {
-            // a  b  c  d  e  f  g  h  i  j  k  l  m
-               2, 3, 3, 2, 1, 2, 2, 2, 1, 2, 2, 2, 3,
-            // n  o  p  q  r  s  t  u  v  w  x  y  z
-               3, 1, 1, 1, 1, 2, 1, 1, 3, 1, 3, 1, 3
-        };
+            string row1 = "qwertyuiopQWERTYUIOP";
+            string row2 = "asdfghjklASDFGHJKL";
+            string row3 = "zxcvbnmZXCVBNM";
+
+            foreach (char c in row1) map[c] = 1;
+            foreach (char c in row2) map[c] = 2;
+            foreach (char c in row3) map[c] = 3;
+        }
 
         public string[] FindWords(string[] words)
         {
-            var result = new List<string>();
+            var result = new List<string>(words.Length);
 
             foreach (var word in words)
             {
-                int firstRow = map[char.ToLower(word[0]) - 'a'];
+                byte row = map[word[0]];
                 bool valid = true;
 
                 for (int i = 1; i < word.Length; i++)
                 {
-                    if (map[char.ToLower(word[i]) - 'a'] != firstRow)
+                    if (map[word[i]] != row)
                     {
                         valid = false;
                         break;
