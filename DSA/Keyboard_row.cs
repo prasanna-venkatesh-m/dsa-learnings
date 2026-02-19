@@ -8,37 +8,37 @@ namespace DSA
 {
     public class Keyboard_row
     {
+        private static readonly int[] map = new int[26]
+        {
+            // a  b  c  d  e  f  g  h  i  j  k  l  m
+               2, 3, 3, 2, 1, 2, 2, 2, 1, 2, 2, 2, 3,
+            // n  o  p  q  r  s  t  u  v  w  x  y  z
+               3, 1, 1, 1, 1, 2, 1, 1, 3, 1, 3, 1, 3
+        };
+
         public string[] FindWords(string[] words)
         {
-            HashSet<char> row1 = new HashSet<char>() { 'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p' };
-            HashSet<char> row2 = new HashSet<char>() { 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l' };
-            HashSet<char> row3 = new HashSet<char>() { 'z', 'x', 'c', 'v', 'b', 'n', 'm' };
+            var result = new List<string>();
 
-            List<string> res = new List<string>();
-            foreach(string normalWord in words)
+            foreach (var word in words)
             {
-                string word = normalWord.ToLower();
-                HashSet<char> targetRow = null;
-                bool isSameRow = true;
+                int firstRow = map[char.ToLower(word[0]) - 'a'];
+                bool valid = true;
 
-                if (row1.Contains(word[0])) targetRow = row1;
-                else if(row2.Contains(word[0])) targetRow = row2;
-                else if (row3.Contains(word[0])) targetRow = row3;
-
-                foreach(char c in word)
+                for (int i = 1; i < word.Length; i++)
                 {
-                    if (!targetRow.Contains(c))
+                    if (map[char.ToLower(word[i]) - 'a'] != firstRow)
                     {
-                        isSameRow = false;
+                        valid = false;
                         break;
                     }
                 }
-                if (isSameRow)
-                {
-                    res.Add(normalWord);
-                }
+
+                if (valid)
+                    result.Add(word);
             }
-            return res.ToArray();
+
+            return result.ToArray();
         }
     }
 }
