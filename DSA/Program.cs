@@ -102,9 +102,12 @@ namespace DSA
             //Detect_Capital dc = new Detect_Capital();
             //Console.WriteLine(dc.DetectCapitalUse("Leetcode"));
 
-            Keyboard_row kr = new Keyboard_row();
-            var res = kr.FindWords(["Hello", "Alaska", "Dad", "Peace"]);
-            foreach (string i in res) Console.WriteLine(i);
+            //Keyboard_row kr = new Keyboard_row();
+            //var res = kr.FindWords(["Hello", "Alaska", "Dad", "Peace"]);
+            //foreach (string i in res) Console.WriteLine(i);
+
+            Backspace_string_compare bs = new Backspace_string_compare();
+            Console.WriteLine(bs.BackspaceCompare("y#fo##f", "y#f#o##f"));
         }
     }
 }
