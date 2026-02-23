@@ -9,9 +9,31 @@ namespace DSA
     {
         public bool CheckRecord(string s)
         {
-            bool hasAbsents = s.Count(x => x == 'A') < 2;
-            bool hasLate =  Regex.IsMatch(s, "LLL");
-            return hasAbsents && !hasLate;
+            int absents = 0;
+            int consecutiveL = 0;
+
+            foreach (char c in s)
+            {
+                if (c == 'A')
+                {
+                    absents++;
+                    if (absents >= 2)
+                        return false;
+                }
+
+                if (c == 'L')
+                {
+                    consecutiveL++;
+                    if (consecutiveL >= 3)
+                        return false;
+                }
+                else
+                {
+                    consecutiveL = 0;
+                }
+            }
+
+            return true;
         }
     }
 }

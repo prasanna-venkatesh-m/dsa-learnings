@@ -110,7 +110,7 @@ namespace DSA
             //Console.WriteLine(bs.BackspaceCompare("y#fo##f", "y#f#o##f"));
 
             Student_Attendance_Record sa = new Student_Attendance_Record();
-            Console.WriteLine(sa.CheckRecord("PPAA"));
+            Console.WriteLine(sa.CheckRecord("PPALLL"));
         }
     }
 }
