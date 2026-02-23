@@ -106,8 +106,11 @@ namespace DSA
             //var res = kr.FindWords(["Hello", "Alaska", "Dad", "Peace"]);
             //foreach (string i in res) Console.WriteLine(i);
 
-            Backspace_string_compare bs = new Backspace_string_compare();
-            Console.WriteLine(bs.BackspaceCompare("y#fo##f", "y#f#o##f"));
+            //Backspace_string_compare bs = new Backspace_string_compare();
+            //Console.WriteLine(bs.BackspaceCompare("y#fo##f", "y#f#o##f"));
+
+            Student_Attendance_Record sa = new Student_Attendance_Record();
+            Console.WriteLine(sa.CheckRecord("PPAA"));
         }
     }
 }
