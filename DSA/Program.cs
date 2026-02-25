@@ -109,8 +109,11 @@ namespace DSA
             //Backspace_string_compare bs = new Backspace_string_compare();
             //Console.WriteLine(bs.BackspaceCompare("y#fo##f", "y#f#o##f"));
 
-            Student_Attendance_Record sa = new Student_Attendance_Record();
-            Console.WriteLine(sa.CheckRecord("PPALLL"));
+            //Student_Attendance_Record sa = new Student_Attendance_Record();
+            //Console.WriteLine(sa.CheckRecord("PPALLL"));
+
+            Contains_Duplicate_II cd = new Contains_Duplicate_II();
+            Console.WriteLine(cd.ContainsNearbyDuplicate([1, 0, 1, 1], 1));
         }
     }
 }
