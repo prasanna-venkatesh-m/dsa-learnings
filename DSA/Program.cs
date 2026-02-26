@@ -112,8 +112,11 @@ namespace DSA
             //Student_Attendance_Record sa = new Student_Attendance_Record();
             //Console.WriteLine(sa.CheckRecord("PPALLL"));
 
-            Contains_Duplicate_II cd = new Contains_Duplicate_II();
-            Console.WriteLine(cd.ContainsNearbyDuplicate([1, 0, 1, 1], 1));
+            //Contains_Duplicate_II cd = new Contains_Duplicate_II();
+            //Console.WriteLine(cd.ContainsNearbyDuplicate([1, 0, 1, 1], 1));
+
+            Can_be_equal cb = new Can_be_equal();
+            Console.WriteLine(cb.CanBeEqual([1, 2, 3, 4], [2, 4, 1, 3]));
         }
     }
 }
