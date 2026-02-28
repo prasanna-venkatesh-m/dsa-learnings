@@ -115,8 +115,11 @@ namespace DSA
             //Contains_Duplicate_II cd = new Contains_Duplicate_II();
             //Console.WriteLine(cd.ContainsNearbyDuplicate([1, 0, 1, 1], 1));
 
-            Can_be_equal cb = new Can_be_equal();
-            Console.WriteLine(cb.CanBeEqual([1, 2, 3, 4], [2, 4, 1, 3]));
+            //Can_be_equal cb = new Can_be_equal();
+            //Console.WriteLine(cb.CanBeEqual([1, 2, 3, 4], [2, 4, 1, 3]));
+
+            Remove_Element re = new Remove_Element();
+            Console.WriteLine(re.RemoveElement([0, 1, 2, 2, 3, 0, 4, 2], 2));
         }
     }
 }
