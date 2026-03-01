@@ -118,8 +118,11 @@ namespace DSA
             //Can_be_equal cb = new Can_be_equal();
             //Console.WriteLine(cb.CanBeEqual([1, 2, 3, 4], [2, 4, 1, 3]));
 
-            Remove_Element re = new Remove_Element();
-            Console.WriteLine(re.RemoveElement([0, 1, 2, 2, 3, 0, 4, 2], 2));
+            //Remove_Element re = new Remove_Element();
+            //Console.WriteLine(re.RemoveElement([0, 1, 2, 2, 3, 0, 4, 2], 2));
+
+            Minimum_Commonvalue mcv = new Minimum_Commonvalue();
+            Console.WriteLine(mcv.GetCommon([1,2,3], [2,4]));
         }
     }
 }
