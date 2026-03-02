@@ -121,8 +121,11 @@ namespace DSA
             //Remove_Element re = new Remove_Element();
             //Console.WriteLine(re.RemoveElement([0, 1, 2, 2, 3, 0, 4, 2], 2));
 
-            Minimum_Commonvalue mcv = new Minimum_Commonvalue();
-            Console.WriteLine(mcv.GetCommon([1,2,3], [2,4]));
+            //Minimum_Commonvalue mcv = new Minimum_Commonvalue();
+            //Console.WriteLine(mcv.GetCommon([1,2,3], [2,4]));
+
+            Valid_Parenthesis vp = new Valid_Parenthesis();
+            Console.WriteLine(vp.IsValid("(])"));
         }
     }
 }
