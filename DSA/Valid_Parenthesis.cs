@@ -10,31 +10,24 @@ namespace DSA
         {
             try
             {
-                Stack<char> rer = new Stack<char>();
+                Stack<char> rer = new Stack<char>(s.Length);
                 for (int i = 0; i < s.Length; i++)
                 {
                     if (s[i] == '(' || s[i] == '{' || s[i] == '[')
                     {
                         rer.Push(s[i]);
                     }
-                    else
+                    else if (s[i] == ')' && rer.Pop() != '(')
                     {
-                        if (s[i] == ')' && rer.Peek() == '(')
-                        {
-                            rer.Pop();
-                        }
-                        else if (s[i] == '}' && rer.Peek() == '{')
-                        {
-                            rer.Pop();
-                        }
-                        else if (s[i] == ']' && rer.Peek() == '[')
-                        {
-                            rer.Pop();
-                        }
-                        else
-                        {
-                            rer.Push(s[i]);
-                        }
+                        return false;
+                    }
+                    else if (s[i] == '}' && rer.Pop() != '{')
+                    {
+                        return false;
+                    }
+                    else if (s[i] == ']' && rer.Pop() != '[')
+                    {
+                        return false;
                     }
                 }
                 return rer.Count == 0;
