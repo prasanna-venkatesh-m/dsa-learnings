@@ -8,34 +8,34 @@ namespace DSA
     {
         public bool IsValid(string s)
         {
-            try
+            if (string.IsNullOrEmpty(s))
+                return true;
+
+            Stack<char> stack = new Stack<char>();
+
+            foreach (char c in s)
             {
-                Stack<char> rer = new Stack<char>(s.Length);
-                for (int i = 0; i < s.Length; i++)
+                if (c == '(' || c == '{' || c == '[')
                 {
-                    if (s[i] == '(' || s[i] == '{' || s[i] == '[')
-                    {
-                        rer.Push(s[i]);
-                    }
-                    else if (s[i] == ')' && rer.Pop() != '(')
-                    {
+                    stack.Push(c);
+                }
+                else
+                {
+                    if (stack.Count == 0)
                         return false;
-                    }
-                    else if (s[i] == '}' && rer.Pop() != '{')
-                    {
-                        return false;
-                    }
-                    else if (s[i] == ']' && rer.Pop() != '[')
+
+                    char top = stack.Pop();
+
+                    if ((c == ')' && top != '(') ||
+                        (c == '}' && top != '{') ||
+                        (c == ']' && top != '['))
                     {
                         return false;
                     }
                 }
-                return rer.Count == 0;
             }
-            catch (Exception e)
-            {
-                return false;
-            }
+
+            return stack.Count == 0;
         }
     }
 }
