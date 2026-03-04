@@ -124,8 +124,11 @@ namespace DSA
             //Minimum_Commonvalue mcv = new Minimum_Commonvalue();
             //Console.WriteLine(mcv.GetCommon([1,2,3], [2,4]));
 
-            Valid_Parenthesis vp = new Valid_Parenthesis();
-            Console.WriteLine(vp.IsValid("(])"));
+            //Valid_Parenthesis vp = new Valid_Parenthesis();
+            //Console.WriteLine(vp.IsValid("(])"));
+
+            Baseball_Game bg = new Baseball_Game();
+            Console.WriteLine(bg.CalPoints(["D"]));
         }
     }
 }
