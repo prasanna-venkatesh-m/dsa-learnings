@@ -127,8 +127,11 @@ namespace DSA
             //Valid_Parenthesis vp = new Valid_Parenthesis();
             //Console.WriteLine(vp.IsValid("(])"));
 
-            Baseball_Game bg = new Baseball_Game();
-            Console.WriteLine(bg.CalPoints(["D"]));
+            //Baseball_Game bg = new Baseball_Game();
+            //Console.WriteLine(bg.CalPoints(["D"]));
+
+            Clear_Digits cd = new Clear_Digits();
+            Console.WriteLine(cd.ClearDigits("cb34"));
         }
     }
 }
