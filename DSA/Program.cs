@@ -130,8 +130,8 @@ namespace DSA
             //Baseball_Game bg = new Baseball_Game();
             //Console.WriteLine(bg.CalPoints(["D"]));
 
-            Clear_Digits cd = new Clear_Digits();
-            Console.WriteLine(cd.ClearDigits("cb34"));
+            // Clear_Digits cd = new Clear_Digits();
+            // Console.WriteLine(cd.ClearDigits("cb34"));
         }
     }
 }
