@@ -8,23 +8,22 @@ namespace DSA
     {
         public string ClearDigits(string s)
         {
-            Stack<char> st = new Stack<char>();
-            for(int i=0; i<s.Length; i++)
+            var sb = new StringBuilder();
+
+            foreach (char c in s)
             {
-                if (s[i] >= '0' && s[i] <= '9')
+                if (char.IsDigit(c))
                 {
-                    if(st.Count > 0)
-                    {
-                        st.Pop();
-                    }
+                    if (sb.Length > 0)
+                        sb.Length--;
                 }
                 else
                 {
-                    st.Push(s[i]);
+                    sb.Append(c);
                 }
             }
 
-            return new string(st.Reverse().ToArray());
+            return sb.ToString();
         }
     }
 }
