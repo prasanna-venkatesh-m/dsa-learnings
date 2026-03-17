@@ -132,6 +132,12 @@ namespace DSA
 
             // Clear_Digits cd = new Clear_Digits();
             // Console.WriteLine(cd.ClearDigits("cb34"));
+
+            //Count_Student_SW cs = new Count_Student_SW();
+            //Console.WriteLine(cs.CountStudents([1, 1, 1, 0, 0, 1], [1, 0, 0, 0, 1, 1]));
+
+            Add_Digits ad = new Add_Digits();
+            Console.WriteLine(ad.AddDigits(0));
         }
     }
 }
