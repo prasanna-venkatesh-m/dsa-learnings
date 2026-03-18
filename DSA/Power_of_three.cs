@@ -8,14 +8,10 @@ namespace DSA
     {
         public bool IsPowerOfThree(int n)
         {
-            for(int i =0; i< n; i++)
-            {
-                if(Math.Pow(3, i) == n)
-                {
-                    return true; 
-                }
-            }
-            return false;
+            if (n == 0) return false;
+            double power = Math.Round(Math.Log(n) / Math.Log(3));
+            double res = Math.Pow(3, power);
+            return res == n;
         }
     }
 }
