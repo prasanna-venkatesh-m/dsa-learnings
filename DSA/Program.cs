@@ -136,8 +136,11 @@ namespace DSA
             //Count_Student_SW cs = new Count_Student_SW();
             //Console.WriteLine(cs.CountStudents([1, 1, 1, 0, 0, 1], [1, 0, 0, 0, 1, 1]));
 
-            Add_Digits ad = new Add_Digits();
-            Console.WriteLine(ad.AddDigits(0));
+            //Add_Digits ad = new Add_Digits();
+            //Console.WriteLine(ad.AddDigits(0));
+
+            Power_of_three p3 = new Power_of_three();
+            Console.WriteLine(p3.IsPowerOfThree(-1));
         }
     }
 }
