@@ -8,16 +8,7 @@ namespace DSA
     {
         public int ArrangeCoins(int n)
         {
-            if (n <= 0) return 0;
-            int count = 0;
-            int sum = 1;
-            int i = 2;
-            while (sum <= n)
-            {
-                sum = sum + i++;
-                count++;
-            }
-            return count;
+            return (int)((Math.Sqrt(1 + 8L * n) - 1) / 2);
         }
     }
 }
