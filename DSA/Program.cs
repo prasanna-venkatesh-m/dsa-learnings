@@ -139,8 +139,11 @@ namespace DSA
             //Add_Digits ad = new Add_Digits();
             //Console.WriteLine(ad.AddDigits(0));
 
-            Power_of_three p3 = new Power_of_three();
-            Console.WriteLine(p3.IsPowerOfThree(243));
+            //Power_of_three p3 = new Power_of_three();
+            //Console.WriteLine(p3.IsPowerOfThree(243));
+
+            Arranging_Coins ac = new Arranging_Coins();
+            Console.WriteLine(ac.ArrangeCoins(6));
         }
     }
 }
