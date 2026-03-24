@@ -142,8 +142,11 @@ namespace DSA
             //Power_of_three p3 = new Power_of_three();
             //Console.WriteLine(p3.IsPowerOfThree(243));
 
-            Arranging_Coins ac = new Arranging_Coins();
-            Console.WriteLine(ac.ArrangeCoins(6));
+            //Arranging_Coins ac = new Arranging_Coins();
+            //Console.WriteLine(ac.ArrangeCoins(6));
+
+            Flower_beds fb = new Flower_beds();
+            Console.WriteLine(fb.CanPlaceFlowers([1, 0, 0, 0, 1, 0, 0], 2));
         }
     }
 }
