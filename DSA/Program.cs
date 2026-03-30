@@ -145,8 +145,11 @@ namespace DSA
             //Arranging_Coins ac = new Arranging_Coins();
             //Console.WriteLine(ac.ArrangeCoins(6));
 
-            Flower_beds fb = new Flower_beds();
-            Console.WriteLine(fb.CanPlaceFlowers([1, 0, 0, 0, 1, 0, 0], 2));
+            //Flower_beds fb = new Flower_beds();
+            //Console.WriteLine(fb.CanPlaceFlowers([1, 0, 0, 0, 1, 0, 0], 2));
+
+            Fib_number fn = new Fib_number();
+            Console.WriteLine(fn.Fib(4));
         }
     }
 }
