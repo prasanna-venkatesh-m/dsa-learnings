@@ -9,15 +9,33 @@ namespace DSA
         public IList<string> FizzBuzz(int n)
         {
             List<string> answer = new List<string>();
-            for(int i = 1; i <= n; i++)
-            {
-                string res = string.Empty;
-                if (i % 3 == 0) res += "Fizz";
-                if (i % 5 == 0) res += "Buzz";
+            int count3 = 0;
+            int count5 = 0;
 
-                if (!string.IsNullOrEmpty(res)) answer.Add(res);
-                else answer.Add(i.ToString());
+            for (int i = 1; i <= n; i++)
+            {
+                count3++;
+                count5++;
+                string res = string.Empty;
+
+                if (count3 == 3)
+                {
+                    res += "Fizz";
+                    count3 = 0;
+                }
+
+                if (count5 == 5)
+                {
+                    res += "Buzz";
+                    count5 = 0;
+                }
+
+                if (string.IsNullOrEmpty(res))
+                    res = i.ToString();
+
+                answer.Add(res);
             }
+
             return answer;
         }
     }
