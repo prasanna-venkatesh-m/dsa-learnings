@@ -148,8 +148,11 @@ namespace DSA
             //Flower_beds fb = new Flower_beds();
             //Console.WriteLine(fb.CanPlaceFlowers([1, 0, 0, 0, 1, 0, 0], 2));
 
-            Fib_number fn = new Fib_number();
-            Console.WriteLine(fn.Fib(4));
+            //Fib_number fn = new Fib_number();
+            //Console.WriteLine(fn.Fib(4));
+
+            Most_CommonWord mcp = new Most_CommonWord();
+            Console.WriteLine(mcp.MostCommonWord("a.", []));
         }
     }
 }
