@@ -9,12 +9,12 @@ namespace DSA
         public string ToGoatLatin(string sentence)
         {
             string[] words = sentence.Split(" ");
-            char[] vowels = ['a', 'e','i','o','u'];
+            char[] vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
             string[] res = new string[words.Length];
             for(int i=0; i < words.Length; i++)
             {
                 StringBuilder word = new StringBuilder(words[i]);
-                if (vowels.Contains(char.ToLower(word[0])))
+                if (vowels.Contains(word[0]))
                 {
                     word.Append("ma");
                 }
