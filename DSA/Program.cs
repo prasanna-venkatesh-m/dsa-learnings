@@ -151,8 +151,11 @@ namespace DSA
             //Fib_number fn = new Fib_number();
             //Console.WriteLine(fn.Fib(4));
 
-            Most_CommonWord mcp = new Most_CommonWord();
-            Console.WriteLine(mcp.MostCommonWord("a.", []));
+            //Most_CommonWord mcp = new Most_CommonWord();
+            //Console.WriteLine(mcp.MostCommonWord("a.", []));
+
+            Goat_Latin gl = new Goat_Latin();
+            Console.WriteLine(gl.ToGoatLatin("I speak Goat Latin"));
         }
     }
 }
