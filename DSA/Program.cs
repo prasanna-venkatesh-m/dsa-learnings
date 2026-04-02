@@ -154,8 +154,11 @@ namespace DSA
             //Most_CommonWord mcp = new Most_CommonWord();
             //Console.WriteLine(mcp.MostCommonWord("a.", []));
 
-            Goat_Latin gl = new Goat_Latin();
-            Console.WriteLine(gl.ToGoatLatin("I speak Goat Latin"));
+            //Goat_Latin gl = new Goat_Latin();
+            //Console.WriteLine(gl.ToGoatLatin("I speak Goat Latin"));
+
+            Height_Checker hc = new Height_Checker();
+            Console.WriteLine(hc.HeightChecker([1, 1, 4, 2, 1, 3]));
         }
     }
 }
