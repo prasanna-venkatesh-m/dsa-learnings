@@ -9,9 +9,20 @@ namespace DSA
         public bool IsMonotonic(int[] nums)
         {
             if (nums.Length < 2) return true;
-            bool isIncreasing = nums[0] < nums[1];
-            int lastNum = nums[1];
-            for(int i=2; i<nums.Length; i++)
+            int address1 = 0;
+            int address2 = 1;
+            while (nums[address1] == nums[address2] && address2 < nums.Length)
+            {
+                address1++;
+                address2++;
+                if (address2 >= nums.Length)
+                {
+                    return true;
+                }
+            }
+            bool isIncreasing = nums[address1] < nums[address2];
+            int lastNum = nums[address2];
+            for(int i=address2+1; i<nums.Length; i++)
             {
                 if(isIncreasing && !(lastNum <= nums[i]))
                 {
@@ -21,6 +32,7 @@ namespace DSA
                 {
                     return false;
                 }
+                lastNum = nums[i];
             }
             return true;
         }

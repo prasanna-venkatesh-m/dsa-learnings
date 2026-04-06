@@ -161,7 +161,7 @@ namespace DSA
             //Console.WriteLine(hc.HeightChecker([1, 1, 4, 2, 1, 3]));
 
             Monotonic_Array ma = new Monotonic_Array();
-            Console.WriteLine(ma.IsMonotonic([1, 2, 2, 3]));
+            Console.WriteLine(ma.IsMonotonic([1, 2, 5, 3, 3]));
         }
     }
 }
