@@ -157,8 +157,11 @@ namespace DSA
             //Goat_Latin gl = new Goat_Latin();
             //Console.WriteLine(gl.ToGoatLatin("I speak Goat Latin"));
 
-            Height_Checker hc = new Height_Checker();
-            Console.WriteLine(hc.HeightChecker([1, 1, 4, 2, 1, 3]));
+            //Height_Checker hc = new Height_Checker();
+            //Console.WriteLine(hc.HeightChecker([1, 1, 4, 2, 1, 3]));
+
+            Monotonic_Array ma = new Monotonic_Array();
+            Console.WriteLine(ma.IsMonotonic([1, 2, 2, 3]));
         }
     }
 }
