@@ -160,8 +160,11 @@ namespace DSA
             //Height_Checker hc = new Height_Checker();
             //Console.WriteLine(hc.HeightChecker([1, 1, 4, 2, 1, 3]));
 
-            Monotonic_Array ma = new Monotonic_Array();
-            Console.WriteLine(ma.IsMonotonic([1, 2, 5, 3, 3]));
+            //Monotonic_Array ma = new Monotonic_Array();
+            //Console.WriteLine(ma.IsMonotonic([1, 2, 5, 3, 3]));
+
+            Sum_Multiples sm = new Sum_Multiples();
+            Console.WriteLine(sm.SumOfMultiples(7));
         }
     }
 }
