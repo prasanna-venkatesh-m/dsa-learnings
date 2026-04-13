@@ -8,7 +8,19 @@ namespace DSA
     {
         public string DefangIPaddr(string address)
         {
-           return address.Replace(".", "[.]");
+            StringBuilder sb = new StringBuilder(address.Length+6);
+            foreach (char c in address)
+            {
+                if (c == '.')
+                {
+                    sb.Append("[.]");
+                }
+                else
+                {
+                    sb.Append(c);
+                }
+            }
+            return sb.ToString();
         }
     }
 }
