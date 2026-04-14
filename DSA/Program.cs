@@ -163,8 +163,11 @@ namespace DSA
             //Monotonic_Array ma = new Monotonic_Array();
             //Console.WriteLine(ma.IsMonotonic([1, 2, 5, 3, 3]));
 
-            Sum_Multiples sm = new Sum_Multiples();
-            Console.WriteLine(sm.SumOfMultiples(7));
+            //Sum_Multiples sm = new Sum_Multiples();
+            //Console.WriteLine(sm.SumOfMultiples(7));
+
+            LargestTime_FromDigits lg = new LargestTime_FromDigits();
+            Console.WriteLine(lg.LargestTimeFromDigits([5,5,5,5]));
         }
     }
 }
