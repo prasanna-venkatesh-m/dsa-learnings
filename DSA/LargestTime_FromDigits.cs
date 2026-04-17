@@ -16,7 +16,15 @@ namespace DSA
                 actual[i] = string.Join("", result[i]);
             }
 
-            var res = actual.Where(x => int.Parse(x) <= 2359).OrderByDescending(x => int.Parse(x)).Take(1).FirstOrDefault();
+            var res = actual
+                    .Where(x =>
+                    {
+                        int hours = int.Parse(x.Substring(0, 2));
+                        int mins = int.Parse(x.Substring(2, 2));
+                        return hours < 24 && mins < 60;
+                    })
+                    .OrderByDescending(x => int.Parse(x))
+                    .FirstOrDefault(); 
             return res?.Insert(2,":") ?? "";
         }
         static List<List<int>> GetPermutations(int[] nums)
