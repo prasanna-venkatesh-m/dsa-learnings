@@ -9,53 +9,42 @@ namespace DSA
     {
         public string LargestTimeFromDigits(int[] arr)
         {
-            var result = GetPermutations(arr);
-            string[] actual = new string[result.Count];
-            for(int i=0; i<result.Count; i++)
-            {
-                actual[i] = string.Join("", result[i]);
-            }
+            int[] count = new int[10];
+            foreach (int d in arr)
+                count[d]++;
 
-            var res = actual
-                    .Where(x =>
+            for (int h1 = 2; h1 >= 0; h1--)
+            {
+                if (count[h1] == 0) continue;
+                count[h1]--;
+
+                for (int h2 = (h1 == 2 ? 3 : 9); h2 >= 0; h2--)
+                {
+                    if (count[h2] == 0) continue;
+                    count[h2]--;
+
+                    for (int m1 = 5; m1 >= 0; m1--)
                     {
-                        int hours = int.Parse(x.Substring(0, 2));
-                        int mins = int.Parse(x.Substring(2, 2));
-                        return hours < 24 && mins < 60;
-                    })
-                    .OrderByDescending(x => int.Parse(x))
-                    .FirstOrDefault(); 
-            return res?.Insert(2,":") ?? "";
-        }
-        static List<List<int>> GetPermutations(int[] nums)
-        {
-            var result = new List<List<int>>();
-            Permute(nums, 0, result);
-            return result;
-        }
+                        if (count[m1] == 0) continue;
+                        count[m1]--;
 
-        static void Permute(int[] nums, int start, List<List<int>> result)
-        {
-            if (start == nums.Length)
-            {
-                // Add a copy of the array to result
-                result.Add(new List<int>(nums));
-                return;
+                        for (int m2 = 9; m2 >= 0; m2--)
+                        {
+                            if (count[m2] == 0) continue;
+
+                            return $"{h1}{h2}:{m1}{m2}";
+                        }
+
+                        count[m1]++;
+                    }
+
+                    count[h2]++;
+                }
+
+                count[h1]++;
             }
 
-            for (int i = start; i < nums.Length; i++)
-            {
-                Swap(nums, start, i);
-                Permute(nums, start + 1, result);
-                Swap(nums, start, i); // backtrack
-            }
-        }
-
-        static void Swap(int[] nums, int i, int j)
-        {
-            int temp = nums[i];
-            nums[i] = nums[j];
-            nums[j] = temp;
+            return "";
         }
     }
 }
