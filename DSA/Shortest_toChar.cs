@@ -10,7 +10,7 @@ namespace DSA
         {
             int[] res = new int[s.Length];
             int i = 0;
-            int left = -99999;
+            int left = -s.Length;
             int right = findRight(i, c, s);
             while(i < s.Length)
             {

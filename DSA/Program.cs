@@ -169,8 +169,11 @@ namespace DSA
             //LargestTime_FromDigits lg = new LargestTime_FromDigits();
             //Console.WriteLine(lg.LargestTimeFromDigits([5,5,5,5]));
 
-            LicenseKey_Formatting lf = new LicenseKey_Formatting();
-            Console.WriteLine(lf.LicenseKeyFormatting("2-5g-3-J", 2));
+            //LicenseKey_Formatting lf = new LicenseKey_Formatting();
+            //Console.WriteLine(lf.LicenseKeyFormatting("2-5g-3-J", 2));
+
+            Shortest_toChar sc = new Shortest_toChar();
+            Console.WriteLine(sc.ShortestToChar("loveleetcode", 'e'));
         }
     }
 }
