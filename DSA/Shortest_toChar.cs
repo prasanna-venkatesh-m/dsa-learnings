@@ -8,20 +8,31 @@ namespace DSA
     {
         public int[] ShortestToChar(string s, char c)
         {
-            List<int> indexList = new List<int>(s.Length);
             int[] res = new int[s.Length];
-            for(int i=0; i< s.Length; i++)
+            int i = 0;
+            int left = -99999;
+            int right = findRight(i, c, s);
+            while(i < s.Length)
             {
-                if (s[i]==c)
+                int shortest = Math.Min((i - (left)), (right - i));
+                res[i] = shortest;
+                i++;
+                if (shortest == 0)
                 {
-                    indexList.Add(i);
+                    left = right;
+                    right = findRight(i, c, s);
                 }
             }
-            for(int i=0; i< s.Length; i++)
-            {
-                res[i] = indexList.Select(x=> Math.Abs((x - i))).OrderBy(x=>x).FirstOrDefault();
-            }
             return res;
+        }
+
+        public int findRight(int startIndex, char findC, string s)
+        {
+            for(int i=startIndex; i<s.Length; i++)
+            {
+                if (s[i] == findC) return i;
+            }
+            return int.MaxValue;
         }
     }
 }
