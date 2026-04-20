@@ -166,8 +166,11 @@ namespace DSA
             //Sum_Multiples sm = new Sum_Multiples();
             //Console.WriteLine(sm.SumOfMultiples(7));
 
-            LargestTime_FromDigits lg = new LargestTime_FromDigits();
-            Console.WriteLine(lg.LargestTimeFromDigits([5,5,5,5]));
+            //LargestTime_FromDigits lg = new LargestTime_FromDigits();
+            //Console.WriteLine(lg.LargestTimeFromDigits([5,5,5,5]));
+
+            LicenseKey_Formatting lf = new LicenseKey_Formatting();
+            Console.WriteLine(lf.LicenseKeyFormatting("2-5g-3-J", 2));
         }
     }
 }
