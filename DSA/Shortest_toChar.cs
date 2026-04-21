@@ -8,31 +8,26 @@ namespace DSA
     {
         public int[] ShortestToChar(string s, char c)
         {
+            int[] left = new int[s.Length];
+            int[] right = new int[s.Length];
             int[] res = new int[s.Length];
-            int i = 0;
-            int left = -s.Length;
-            int right = findRight(i, c, s);
-            while(i < s.Length)
+            int leftMax = -10001;
+            int rightMax = 200001;
+            for(int i=0; i<s.Length; i++)
             {
-                int shortest = Math.Min((i - (left)), (right - i));
-                res[i] = shortest;
-                i++;
-                if (shortest == 0)
-                {
-                    left = right;
-                    right = findRight(i, c, s);
-                }
+                if (s[i] == c) leftMax = i;
+                left[i] = i- leftMax;
+            }
+            for (int i = s.Length-1; i >=0; i--)
+            {
+                if (s[i] == c) rightMax = i;
+                right[i] = rightMax - i;
+            }
+            for (int i = 0; i < s.Length; i++)
+            {
+                res[i] = Math.Min(left[i], right[i]);
             }
             return res;
-        }
-
-        public int findRight(int startIndex, char findC, string s)
-        {
-            for(int i=startIndex; i<s.Length; i++)
-            {
-                if (s[i] == findC) return i;
-            }
-            return int.MaxValue;
         }
     }
 }
