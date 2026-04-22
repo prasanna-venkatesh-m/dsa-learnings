@@ -9,25 +9,27 @@ namespace DSA
     {
         public string LicenseKeyFormatting(string s, int k)
         {
-            String sb = "";
-            int reset = 0;
-            int i = s.Length - 1;
-            while (i >= 0)
+            var sb = new StringBuilder();
+            int count = 0;
+
+            for (int i = s.Length - 1; i >= 0; i--)
             {
-                if (reset == k && s[i]!='-') {
-                    sb.Insert(0, "-");
-                    reset = 0;
+                if (s[i] == '-') continue;
+
+                if (count == k)
+                {
+                    sb.Append('-');
+                    count = 0;
                 }
 
-                if (s[i] == '-') i--;
-                else
-                {
-                    sb.Insert(0, char.ToUpper(s[i])+"");
-                    i--;
-                    reset++;
-                }
+                sb.Append(char.ToUpper(s[i]));
+                count++;
             }
-            return sb;
+
+            var result = sb.ToString().ToCharArray();
+            Array.Reverse(result);
+
+            return new string(result);
         }
     }
 }
