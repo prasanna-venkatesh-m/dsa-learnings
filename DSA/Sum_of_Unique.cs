@@ -9,28 +9,26 @@ namespace DSA
     {
         public int SumOfUnique(int[] nums)
         {
-            Hashtable ht = new Hashtable();
-            for(int i=0; i<nums.Length; i++)
-            {
-                if (ht.ContainsKey(nums[i]))
+            Dictionary<int, int> counts = new Dictionary<int, int>();
+            foreach (int i in nums) {
+                if (counts.ContainsKey(i))
                 {
-                    ht[nums[i]] = 1 + (int)ht[nums[i]];
+                    counts[i]++;
                 }
-                else
-                {
-                    ht.Add(nums[i], 1);
+                else{
+                    counts.Add(i, 1);
                 }
             }
-            
-            int res = 0;
-            foreach (DictionaryEntry entry in ht)
+            int sum = 0;
+            foreach (var pair in counts)
             {
-                if ((int)entry.Value == 1)
+                if (pair.Value == 1)
                 {
-                    res += (int)entry.Key;
+                    sum += pair.Key;
                 }
             }
-            return res;
+
+            return sum;
         }
     }
 }
