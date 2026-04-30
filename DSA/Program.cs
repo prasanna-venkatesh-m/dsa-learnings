@@ -169,11 +169,14 @@ namespace DSA
             //LargestTime_FromDigits lg = new LargestTime_FromDigits();
             //Console.WriteLine(lg.LargestTimeFromDigits([5,5,5,5]));
 
-            LicenseKey_Formatting lf = new LicenseKey_Formatting();
-            Console.WriteLine(lf.LicenseKeyFormatting("--a-a-a-a--", 2));
+            //LicenseKey_Formatting lf = new LicenseKey_Formatting();
+            //Console.WriteLine(lf.LicenseKeyFormatting("--a-a-a-a--", 2));
 
             //Shortest_toChar sc = new Shortest_toChar();
             //Console.WriteLine(sc.ShortestToChar("loveleetcode", 'e'));
+
+            Sum_of_Unique su = new Sum_of_Unique();
+            Console.WriteLine(su.SumOfUnique([1, 2, 2]));
         }
     }
 }
