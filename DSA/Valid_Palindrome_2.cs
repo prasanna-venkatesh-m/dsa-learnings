@@ -10,8 +10,7 @@ namespace DSA
         {
             for(int i=0; i< s.Length; i++)
             {
-                string temp = s.Substring(0, i) + s.Substring(i+1);
-                if (checkPalindrome(temp)) return true;
+                if (checkPalindrome(s.Substring(0, i) + s.Substring(i + 1))) return true;
             }
             return false;
         }
