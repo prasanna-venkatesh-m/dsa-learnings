@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data.Common;
@@ -69,5 +70,9 @@ namespace DSA.SQL
         //               WHEN sex = 'm' THEN 'f'
         //             END
         //WHERE sex IN('f', 'm');
+
+        //        Solution 2:
+        //            UPDATE Salary
+        //SET sex = CHAR(ASCII('f') + ASCII('m') - ASCII(sex));
     }
 }
