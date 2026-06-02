@@ -61,5 +61,16 @@ namespace DSA.SQL
         //FROM Employee e
         //INNER JOIN Employee m on e.managerId = m.id
         //WHERE e.salary > m.salary
+
+        //Solution 2:
+
+        //        SELECT e.name AS Employee
+        //FROM Employee e
+        //WHERE EXISTS (
+        //    SELECT 1
+        //    FROM Employee m
+        //    WHERE m.id = e.managerId
+        //      AND e.salary > m.salary
+        //);
     }
 }
