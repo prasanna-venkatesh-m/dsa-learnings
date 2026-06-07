@@ -5,6 +5,7 @@ using System.Data.Common;
 using System.Numerics;
 using System.Reflection.Emit;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Xml;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
@@ -59,6 +60,15 @@ namespace DSA.SQL
         //FROM Orders
         //GROUP By customer_number
         //ORDER BY COUNT(*) DESC
+
+        //        WITH cte AS(
+        //    SELECT customer_number, COUNT(*) cnt
+        //    FROM Orders
+        //    GROUP BY customer_number
+        //)
+        //SELECT TOP 1 customer_number
+        //FROM cte
+        //ORDER BY cnt DESC;
 
     }
 }
