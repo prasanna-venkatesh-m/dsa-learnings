@@ -97,5 +97,13 @@ namespace DSA.SQL
         //RIGHT JOIN Users u on r.user_id = u.id
         //GROUP BY r.user_id, u.name
         //ORDER BY travelled_distance DESC, name;
+
+        //        SELECT
+        //u.name,
+        //ISNULL(SUM(distance), 0) as travelled_distance
+        //FROM Rides r
+        //RIGHT JOIN Users u on r.user_id = u.id
+        //GROUP BY u.id, u.name
+        //ORDER BY travelled_distance DESC, name;
     }
 }
