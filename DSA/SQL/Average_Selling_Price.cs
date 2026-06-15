@@ -84,7 +84,7 @@ namespace DSA.SQL
 
         //        SELECT
         //fil.product_id,
-        //CAST(CAST(SUM(fil.pu) as DECIMAL(10,2)) / SUM(fil.units) as DECIMAL(10,2)) as average_price
+        //ISNULL(CAST(CAST(SUM(fil.pu) as DECIMAL(10,2)) / SUM(fil.units) as DECIMAL(10,2)), 0) as average_price
         //FROM(
         //    SELECT
         //p.product_id,
@@ -93,7 +93,7 @@ namespace DSA.SQL
         //(p.price* u.units) as pu
         //FROM
         //Prices p
-        //JOIN UnitsSold u on p.product_id = u.product_id AND(u.purchase_date >= p.start_date) AND(u.purchase_date <= p.end_date)
+        //LEFT JOIN UnitsSold u on p.product_id = u.product_id AND (u.purchase_date >= p.start_date) AND(u.purchase_date <= p.end_date)
         //) as fil
         //GROUP BY fil.product_id
     }
