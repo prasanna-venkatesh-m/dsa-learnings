@@ -150,5 +150,24 @@ namespace DSA.SQL
         //LEFT JOIN Examinations e on s.student_id = e.student_id AND su.subject_name = e.subject_name
         //GROUP BY s.student_id, s.student_name, su.subject_name
         //ORDER BY s.student_id, su.subject_name
+
+        //        SELECT
+        //    s.student_id,
+        //    s.student_name,
+        //    su.subject_name,
+        //    COALESCE(e.attended_exams, 0) AS attended_exams
+        //FROM Students s
+        //CROSS JOIN Subjects su
+        //LEFT JOIN(
+        //    SELECT
+        //        student_id,
+        //        subject_name,
+        //        COUNT(*) AS attended_exams
+        //    FROM Examinations
+        //    GROUP BY student_id, subject_name
+        //) e
+        //ON s.student_id = e.student_id
+        //AND su.subject_name = e.subject_name
+        //ORDER BY s.student_id, su.subject_name;
     }
 }
