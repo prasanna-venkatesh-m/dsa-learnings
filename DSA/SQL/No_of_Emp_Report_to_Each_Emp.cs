@@ -86,10 +86,10 @@ namespace DSA.SQL
         //m.employee_id,
         //MIN(m.name) as name,
         //COUNT(*) as reports_count,
-        //CEILING(AVG(CAST(e.age AS DECIMAL(10,1)))) as average_age
+        //ROUND(AVG(e.age* 1.0), 0) AS average_age
         //FROM Employees e
         //JOIN Employees m on e.reports_to = m.employee_id
         //WHERE e.reports_to IS NOT NULL
-        //GROUP BY e.reports_to, m.employee_id
+        //GROUP BY e.reports_to, m.employee_id;
     }
-    }
+}
