@@ -10,14 +10,21 @@ namespace DSA
         public int MaxProfit(int[] prices)
         {
             int max = 0;
-            for (int i = 0; i < prices.Length - 1; i++)
+            int maxIndex = -1;
+            for (int i = 1; i < prices.Length; i++)
             {
-                for (int j = i + 1; j < prices.Length; j++)
+                if (prices[i] >= max)
                 {
-                    max = (prices[j] - prices[i]) > max ? prices[j] - prices[i] : max;
+                    max = prices[i];
+                    maxIndex = i;
                 }
             }
-            return max;
+            int small = max;
+            for(int i = 0; i< maxIndex; i++)
+            {
+                small = prices[i] <= small ? prices[i] : small;
+            }
+            return max - small;
         }
     }
 }
