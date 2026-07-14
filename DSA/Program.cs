@@ -185,7 +185,7 @@ namespace DSA
             //Console.WriteLine(mp.MaxProfit([7, 1, 5, 3, 6, 4]));
 
             Pascal_Triangle pt = new Pascal_Triangle();
-            pt.Generate(10);
+            pt.Generate(5);
         }
     }
 }

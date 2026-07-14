@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Text;
 
 namespace DSA
@@ -8,27 +9,28 @@ namespace DSA
     {
         public IList<IList<int>> Generate(int numRows)
         {
-            IList<IList<int>> lists = new List<IList<int>>(numRows);
-            for(int i=1; i<= numRows; i++)
+            var result = new List<IList<int>>(numRows);
+
+            for (int i = 0; i < numRows; i++)
             {
-                lists.Add(giveList(i));
-            }
-            
-            for (int i = 2; i < numRows; i++)
-            {
-                for(int k = 1; k < lists[i].Count - 1; k++)
+                var row = new List<int>(i + 1);
+
+                for (int j = 0; j <= i; j++)
                 {
-                    lists[i][k] = lists[i - 1][k - 1] + lists[i - 1][k];
+                    if (j == 0 || j == i)
+                    {
+                        row.Add(1);
+                    }
+                    else
+                    {
+                        row.Add(((List<int>)result[i - 1])[j - 1] + ((List<int>)result[i - 1])[j]);
+                    }
                 }
+
+                result.Add(row);
             }
-            return lists;
-        }
-        private IList<int> giveList(int size)
-        {
-            List<int> list = new List<int>(new int[size]);
-            list[0] = 1;
-            list[size - 1] = 1;
-            return list;
+
+            return result;
         }
     }
 }
