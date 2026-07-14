@@ -9,15 +9,20 @@ namespace DSA
     {
         public int MaxProfit(int[] prices)
         {
-            int max = 0;
-            for (int i = prices.Length - 1; i >= 0; i--)
+            int minimumValue = prices[0];
+            int maxProfit = 0;
+            for(int i =1; i< prices.Length; i++)
             {
-                for (int j = 0; j < i; j++)
+                if (prices[i] < minimumValue)
                 {
-                    max = (prices[i] - prices[j]) > max ? prices[i] - prices[j] : max;
+                    minimumValue = prices[i];
+                }
+                else
+                {
+                    maxProfit = Math.Max(maxProfit, (prices[i] - minimumValue));
                 }
             }
-            return max;
+            return maxProfit;
         }
     }
 }
